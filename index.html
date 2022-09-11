@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+  #loading,#results{
+    display: none;
+  }
+</style>
+
+  
+
+
+</head>
+
+<body class="bg-dark">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5 ">
+          <h1 class="heading display-5 pb-3">LOAN CALCULATOR</h1>
+
+          <form id="loan-form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">$</div>
+                </div>
+                <input type="number" placeholder="Loan Amount" id="loan_amount" class="form-control" />
+              </div>
+            </div><br>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">%</div>
+                </div>
+                <input type="number" placeholder="Interest" id="interest" class="form-control" />
+              </div>
+            </div><br>
+            <div class="form-group">
+              <input type="number" placeholder="Years to pay" id="year" class="form-control" />
+            </div><br>
+            <div class="form-group">
+              <input type="submit" class="btn btn-dark btn-block form-control" value="Calculate" width="100" />
+            </div>
+          </form>
+
+           <div id="loading">
+            <img src="img/amalie-steiness.gif" alt="loading">
+           </div>
+          
+
+
+          <div id="results" class="pt-3">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-text">Monthly Payment</div>
+                <input type="number" id="Monthly_Payment" class="form-control" disabled />
+              </div>
+            </div><br>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-text">Total Payment</div>
+                <input type="number" id="Total_Payment" class="form-control" disabled />
+              </div>
+            </div><br>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-text">Total Interest</div>
+                <input type="number" id="Total_Interest" class="form-control" disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
